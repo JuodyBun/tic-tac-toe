@@ -24,5 +24,27 @@ class Board extends React.Component {
         }
     };
 
+    play = (tile) => {
+        const { player1, player2, turn, handleScore, endgame } = this.props;
+        tile.classList.remove("not-played");
+        if (player1) {
+            tile.innerHTML = "X";
+            turn("player1", false, "player2", true);
+            if (this.diagonal("X") || this.row("X") || this.column("X")) {
+                handleScore("player1");
+                endgame(true);
+                this.reset();
+            }
+        }
+        if (player2) {
+            tile.innerHTML = "O";
+            turn("player2", false, "player1", true);
+            if (this.diagonal("O") || this.row("O") || this.column("O")) {
+                handleScore("player2");
+                endgame(true);
+                this.reset();
+            }
+        }
+    };
     
 }
