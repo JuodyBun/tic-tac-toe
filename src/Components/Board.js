@@ -97,5 +97,32 @@ class Board extends React.Component {
             return false;
     };
 
-    
+    column = (play) => {
+        let column1 = [
+            document.getElementById("tile0").innerHTML,
+            document.getElementById("tile3").innerHTML,
+            document.getElementById("tile6").innerHTML,
+        ];
+        let column2 = [
+            document.getElementById("tile1").innerHTML,
+            document.getElementById("tile4").innerHTML,
+            document.getElementById("tile7").innerHTML,
+        ];
+        let column3 = [
+            document.getElementById("tile2").innerHTML,
+            document.getElementById("tile5").innerHTML,
+            document.getElementById("tile8").innerHTML,
+        ];
+        
+        if (column1[0] === play && column1[1] === play && column1[2] === play) {
+            return true;    
+        }
+        if (column2[0] === play && column2[1] === play && column2[2] === play) {
+            return true;
+        }
+        if (column3[0] === play && column3[1] === play && column3[2] === play) {
+            return true;
+        }
+            return false;
+    };   
 }
