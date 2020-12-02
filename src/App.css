@@ -15,6 +15,14 @@
   width: 70%;
 }
 
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
 .screen {
   display: flex;
   flex-direction: column;
