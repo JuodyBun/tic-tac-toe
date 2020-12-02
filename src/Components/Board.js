@@ -47,4 +47,26 @@ class Board extends React.Component {
         }
     };
     
+    diagonal = (play) => {
+        let left = [
+            document.getElementById("tile0").innerHTML,
+            document.getElementById("tile4").innerHTML,
+            document.getElementById("tile8").innerHTML,
+       ];
+       let right = [
+            document.getElementById("tile2").innerHTML,
+            document.getElementById("tile4").innerHTML,
+            document.getElementById("tile6").innerHTML,
+       ];
+
+       if (left[0] === play && left[1] === play && left [2] === play) {
+           return true;
+       }
+       if (right[0] === play && right[1] === play && right[2] === play) {
+           return true;
+       }
+       return false;
+   };
+
+   
 }
