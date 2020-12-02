@@ -66,7 +66,36 @@ class Board extends React.Component {
            return true;
        }
        return false;
-   };
+    };
 
-   
+    row = (play) => {
+        let row1 = [
+            document.getElementById("tile0").innerHTML,
+            document.getElementById("tile1").innerHTML,
+            document.getElementById("tile2").innerHTML,
+        ];
+        let row2 = [
+            document.getElementById("tile3").innerHTML,
+            document.getElementById("tile4").innerHTML,
+            document.getElementById("tile5").innerHTML,
+        ];
+        let row3 = [
+            document.getElementById("tile6").innerHTML,
+            document.getElementById("tile7").innerHTML,
+            document.getElementById("tile8").innerHTML,
+        ];
+
+        if (row1[0] === play && row1[1] === play && row1[2] === play) {
+            return true;    
+        }
+        if (row2[0] === play && row2[1] === play && row2[2] === play) {
+            return true;
+        }
+        if (row3[0] === play && row3[1] === play && row3[2] === play) {
+            return true;
+        }
+            return false;
+    };
+
+    
 }
