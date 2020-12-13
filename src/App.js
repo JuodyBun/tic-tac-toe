@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import Game from "./Components/Game";
 import Login from "./Components/Login";
 import Endgame from "./Components/Endgame";
@@ -37,4 +37,42 @@ class App extends React.Component {
         this.setState({ userName1: player1, userName2: player2, showLogin: false });
     };
 
+    handleEndgame = (input) => {
+        this.setState({ showEndgame: input });
+    };
+    render() {
+        const {
+            ties,
+            player1,
+            player2,
+            showLogin,
+            userName1,
+            userName2,
+            showEndgame,
+            winner,
+        } = this.state;
+        return (
+            <div className="App">
+                {showEndgame ? (
+                    <Endgame winner={winner} endgame={this.handleEndgame} />
+                ) : null}
+                {showLogin ? <Login names={this.handleName} /> : null}
+                <Navbar
+                    ties={ties}
+                    userName1={userName1}
+                    userName2={userName2}
+                    player1={player1}
+                    player2={player2}
+                />
+                <Game 
+                    userName1={userName1}
+                    userName2={userName2}
+                    endgame={this.handleEndgame}
+                    handleScore={this.handleScore}
+                />
+            </div>
+        );
+    }
 }
+
+export default App;
