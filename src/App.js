@@ -17,5 +17,19 @@ class App extends React.Component {
         showEndgame: false,
     };
 
-    
+    handleScore = (player) => {
+        const { userName1, userName2 } = this.state;
+        let winner;
+        if (player === "player1") {
+            winner = userName1;
+        } else if (player === "player2") {
+            winner = userName2;
+        } else {
+            winner = "Tied";
+        }
+        this.setState({
+            [player]: this.state[player] + 1,
+            winner: winner,
+        });
+    };
 }
