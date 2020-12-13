@@ -32,4 +32,9 @@ class App extends React.Component {
             winner: winner,
         });
     };
+
+    handleName = (player1, player2) => {
+        this.setState({ userName1: player1, userName2: player2, showLogin: false });
+    };
+
 }
