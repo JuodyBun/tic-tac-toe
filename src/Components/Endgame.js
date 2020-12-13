@@ -10,7 +10,7 @@ class Endgame extends React.Component {
     };
     render() {
         const { winner } = this.props;
-        const { tield, playerWin } = this.state;
+        const { tied, playerWin } = this.state;
         return (
             <div className="wrapper">
                 <div className="screen">
