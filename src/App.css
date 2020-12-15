@@ -24,8 +24,8 @@
 }
 
 .board {
-  height: 330px;
-  width: 330px;
+  height: 350px;
+  width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
