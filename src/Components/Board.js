@@ -94,7 +94,7 @@ class Board extends React.Component {
         if (row3[0] === play && row3[1] === play && row3[2] === play) {
             return true;
         }
-            return false;
+        return false;
     };
 
     column = (play) => {
@@ -123,7 +123,7 @@ class Board extends React.Component {
         if (column3[0] === play && column3[1] === play && column3[2] === play) {
             return true;
         }
-            return false;
+        return false;
     };   
 
     reset = () => {
