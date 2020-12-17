@@ -24,8 +24,8 @@
 }
 
 .board {
-  height: 350px;
-  width: 350px;
+  height: 550px;
+  width: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,8 +34,8 @@
 }
 
 .tile {
-  width: 110px;
-  height: 110px;
+  width: 176px;
+  height: 177px;
   cursor: pointer;
   display: flex;
   justify-content: center;
