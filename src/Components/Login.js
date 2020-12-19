@@ -28,6 +28,7 @@ class Login extends React.Component {
                             <input 
                                 type="name"
                                 id="player1"
+                                placeholder="Player 1"
                                 className="form-control"
                                 onChange={this.handleChange}
                             />
@@ -36,6 +37,7 @@ class Login extends React.Component {
                             <input 
                                 type="name"
                                 id="player2"
+                                placeholder="Player 2"
                                 className="form-control"
                                 onChange={this.handleChange}
                             />
